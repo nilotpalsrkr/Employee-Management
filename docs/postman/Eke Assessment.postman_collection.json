@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "fa3f9042-3732-4ba7-bf82-2bac34ca193a",
+		"name": "Eke Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2369986"
+	},
+	"item": [
+		{
+			"name": "Add Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Nilotpal\",\n    \"familyName\": \"Sarkar\",\n    \"email\": \"nilotpal.srkr@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/emp",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"emp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Department",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Tech\",\n    \"city\": \"Helsinki\",\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/dept",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"SmartVision\",\n    \"startDate\": \"2023-01-12\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/proj",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"proj"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Employe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\": 302\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/emp",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"emp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Department",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/dept",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Project",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/proj",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"proj"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\": 452,\n    \"firstname\": \"Nilot\",\n    \"familyName\": \"Sarkar\",\n    \"email\": \"nilotpal.srkr@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/emp",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"emp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Project For Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\": 452,\n    \"projectIds\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/emp/project",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"emp",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Project For Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\": 452,\n    \"projectIds\": [2]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/emp/project",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"emp",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify Department",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"deptId\": 1,\n    \"name\": \"Technology\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/dept",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify Project",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"projId\": 1,\n    \"name\": \"SmartVis\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/proj",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"proj"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Employee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"empId\": 301,\n    \"firstname\": \"Nilotpal\",\n    \"familyName\": \"Sarkar\",\n    \"email\": \"nilotpal.srkr@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/emp?status=inactive",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"emp"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "inactive"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Departments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/dept?status=all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Projects",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/proj?status=active",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"proj"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "active"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
