@@ -1,7 +1,24 @@
-Assuming the Employee management springboot microservice is hosted in localhost,
+#Assuming the Employee management springboot microservice is hosted in localhost,
 
 Start the application:
 1. Using Docker Compose
+```bash
 #docker-compose up -d
+```
 Swagger UI  - http://localhost:8080/swagger-ui/index.html#/
 Postman Collection - docs/postman -- Please import the collection in postman to start using the api's
+
+2. Docker pull:
+```bash
+# docker pull nilotpals92/employee-ms
+```
+
+===========================================================================================================
+Steps to create docker image:
+```bash
+# docker build -t nilotpals92/employee-ms:1.0 .
+```
+Steps to push the image to docker public repo - https://hub.docker.com/repository/docker/nilotpals92/employee-ms/general
+```bash
+# docker push nilotpals92/employee-ms:1.0
+```
