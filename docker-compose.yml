@@ -4,7 +4,7 @@ services:
     image: postgres:alpine
     container_name: postgres-db
     ports:
-      - 5434:5432
+      - 5432:5432
     environment:
       POSTGRES_USER: eke
       POSTGRES_PASSWORD: eke
@@ -14,8 +14,8 @@ services:
     networks:
       - backend
 
-  app:
-    image: eke-employee-mgmt:1.0
+  employee-ms:
+    image: nilotpals92/employee-ms:1.0
     build:
       context: .
       dockerfile: Dockerfile
@@ -31,4 +31,4 @@ volumes:
 
 networks:
   backend:
-    driver: bridge
+    driver: host
