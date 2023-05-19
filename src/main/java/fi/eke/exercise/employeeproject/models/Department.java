@@ -1,3 +1,10 @@
+/***
+ * This class represents the Department.
+ * This is a Database entity for Department class.
+ *
+ * @author : Nilotpal Sarkar
+ * @since : 1.0
+ */
 package fi.eke.exercise.employeeproject.models;
 
 

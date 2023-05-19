@@ -1,3 +1,11 @@
+/***
+ * This class represents the DepartmentRepository.
+ * This is a JPA Repository interface for Department.
+ * This has few custom methods defined that acts on active entities etc!
+ *
+ * @author : Nilotpal Sarkar
+ * @since : 1.0
+ */
 package fi.eke.exercise.employeeproject.repository;
 
 import fi.eke.exercise.employeeproject.models.Department;

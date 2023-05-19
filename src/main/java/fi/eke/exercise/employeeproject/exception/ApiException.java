@@ -1,3 +1,10 @@
+/***
+ * This class represents the ApiException.
+ * This class centrally handles all the application thrown errors.
+ *
+ * @author : Nilotpal Sarkar
+ * @since : 1.0
+ */
 package fi.eke.exercise.employeeproject.exception;
 
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;

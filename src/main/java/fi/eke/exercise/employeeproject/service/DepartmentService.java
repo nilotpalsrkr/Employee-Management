@@ -1,3 +1,12 @@
+/***
+ * This class represents the DepartmentService.
+ * This is a service layer for Department Service.
+ * This has all the methods that the controller would
+ * need to interact to the DB layer via this service layer.
+ *
+ * @author : Nilotpal Sarkar
+ * @since : 1.0
+ */
 package fi.eke.exercise.employeeproject.service;
 
 import fi.eke.exercise.employeeproject.exception.ResourceCannotBeRemovedException;

@@ -1,3 +1,10 @@
+/***
+ * This class represents the Constants.
+ * This is a Constant class for various if the Constants accross the application.
+ *
+ * @author : Nilotpal Sarkar
+ * @since : 1.0
+ */
 package fi.eke.exercise.employeeproject.util;
 
 public class Constants {

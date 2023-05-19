@@ -1,3 +1,10 @@
+/***
+ * This class represents the Employee.
+ * This is a database entity for Employee class.
+ *
+ * @author : Nilotpal Sarkar
+ * @since : 1.0
+ */
 package fi.eke.exercise.employeeproject.models;
 
 
