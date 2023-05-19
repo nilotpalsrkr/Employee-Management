@@ -44,17 +44,20 @@ After the containers starts, access the below swagger url.
 http://localhost:8080/swagger-ui/index.html#/
 
 ### Method - 2: Run 2 docker containers - employee-ms and postgres.
-
-1. Pull and run postgres
+1. Create a bridge network that 
+   ```bash
+   docker network create mynetwork
+   ```
+2. Pull and run postgres
 ```bash
 docker run -d --network mynetwork --name postgres-db -e POSTGRES_PASSWORD=eke -e POSTGRES_USER=eke -e POSTGRES_DB=employee_mgmt -p 5432:5432 postgres:alpine
 
 ```
-2. Run the image - nilotpals92/employee-ms
+3. Run the image - nilotpals92/employee-ms
 ```bash
 docker run -d --network mynetwork --name employee-ms -p 8080:8080 nilotpals92/employee-ms:1.0
 ```
-3. Test the application -
+4. Test the application -
    ** Postman **
 
 Import the postman json, placed in the github repository

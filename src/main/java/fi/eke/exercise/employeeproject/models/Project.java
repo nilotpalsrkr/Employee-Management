@@ -1,3 +1,10 @@
+/***
+ * This class represents the Project.
+ * This is a database entity for Project class.
+ *
+ * @author : Nilotpal Sarkar
+ * @since : 1.0
+ */
 package fi.eke.exercise.employeeproject.models;
 
 import jakarta.persistence.*;

@@ -1,3 +1,11 @@
+/***
+ * This class represents the BussinessUtil.
+ * This is a Util class for various if the bussiness util
+ * methods required accros the classes.
+ *
+ * @author : Nilotpal Sarkar
+ * @since : 1.0
+ */
 package fi.eke.exercise.employeeproject.util;
 
 import fi.eke.exercise.employeeproject.models.Department;

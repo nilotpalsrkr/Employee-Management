@@ -1,6 +1,13 @@
+/***
+ * This class represents the DepartmentCreateRequest.
+ * This is a DTO for DepartmentCreateRequest. This would be used in restapi's, RequestBody.
+ *
+ * @author : Nilotpal Sarkar
+ * @since : 1.0
+ */
 package fi.eke.exercise.employeeproject.models.rest;
 
-import org.apache.commons.validator.routines.EmailValidator;
+
 
 public record DepartmentCreateRequest(String name, String city) {
     public DepartmentCreateRequest(String name, String city) {

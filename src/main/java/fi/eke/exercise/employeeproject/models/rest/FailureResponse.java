@@ -1,3 +1,10 @@
+/***
+ * This class represents the FailureResponse.
+ * This is a Java Record for all standard failure responses.
+ *
+ * @author : Nilotpal Sarkar
+ * @since : 1.0
+ */
 package fi.eke.exercise.employeeproject.models.rest;
 
 import org.springframework.http.HttpStatus;
