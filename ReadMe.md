@@ -10,10 +10,11 @@
 
 ## Public link
 github - https://github.com/nilotpalsrkr/Employee-Management/tree/master
+
 docker -  https://hub.docker.com/repository/docker/nilotpals92/employee-ms/general
 
 ## Start the application:
-### Method - 1: Download from github, build the project, start the project with docker-compose
+### Method - 1:  Download code from github, build the project, start the project with single docker-compose
 1. Git clone
    ```bash
    git clone git@github.com:nilotpalsrkr/Employee-Management.git
@@ -43,7 +44,9 @@ Import the postman json, placed in the repository
 After the containers starts, access the below swagger url.
 http://localhost:8080/swagger-ui/index.html#/
 
-### Method - 2: Run 2 docker containers - employee-ms and postgres.
+
+
+### Method - 2:  Run two docker containers - employee-ms and postgres.
 1. Create a bridge network that 
    ```bash
    docker network create mynetwork
