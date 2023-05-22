@@ -41,4 +41,8 @@ public class Project {
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "projects")
     private List<Employee> employees;
+
+    public boolean hasEmployees() {
+        return  !employees.isEmpty();
+    }
 }

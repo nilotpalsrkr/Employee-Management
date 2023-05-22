@@ -12,14 +12,17 @@ package fi.eke.exercise.employeeproject.service;
 import fi.eke.exercise.employeeproject.exception.ResourceCannotBeRemovedException;
 import fi.eke.exercise.employeeproject.exception.ResourceNotFoundException;
 import fi.eke.exercise.employeeproject.models.Department;
+import fi.eke.exercise.employeeproject.models.Employee;
 import fi.eke.exercise.employeeproject.models.rest.*;
 import fi.eke.exercise.employeeproject.repository.DepartmentRepository;
+import fi.eke.exercise.employeeproject.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static fi.eke.exercise.employeeproject.util.BussinessUtil.translateToDepartmentResponse;
 import static fi.eke.exercise.employeeproject.util.Constants.*;
@@ -60,7 +63,7 @@ public class DepartmentService {
                         return true;
                     }
                     else {
-                        throw new ResourceCannotBeRemovedException("DEPARTMENT_CANNOT_BE_DELETED_WITH_EMPLOYEES", "Only Departments with no employees can be marked removed.");
+                        throw new ResourceCannotBeRemovedException("DEPARTMENT_CANNOT_BE_DELETED_WITH_EMPLOYEES", "Only Departments with no employees can be marked removed. Associated employees : "+ department.getEmployees().stream().map(x -> x.getEmployeeId()).collect(Collectors.toList()));
                     }
 
                 }

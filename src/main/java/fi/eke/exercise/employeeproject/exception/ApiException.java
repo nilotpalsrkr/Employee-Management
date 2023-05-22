@@ -54,7 +54,7 @@ public class ApiException {
         }
         Throwable cause1 = ex.getCause().getCause();
         if (cause1 instanceof IllegalArgumentException) {
-             errorResponse = new FailureResponse(cause.getLocalizedMessage(), HttpStatus.BAD_REQUEST, "");
+             errorResponse = new FailureResponse(cause1.getLocalizedMessage(), HttpStatus.BAD_REQUEST, "");
             return new ResponseEntity(errorResponse, HttpStatus.BAD_REQUEST);
         }
         else {

@@ -39,6 +39,6 @@ public class Department {
     private List<Employee> employees;
 
     public boolean hasEmployees() {
-        return employees != null || !employees.isEmpty();
+        return  !employees.isEmpty();
     }
 }
