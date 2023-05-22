@@ -9,9 +9,12 @@
  */
 package fi.eke.exercise.employeeproject.service;
 
+import fi.eke.exercise.employeeproject.exception.ResourceCannotBeRemovedException;
 import fi.eke.exercise.employeeproject.exception.ResourceNotFoundException;
+import fi.eke.exercise.employeeproject.models.Employee;
 import fi.eke.exercise.employeeproject.models.Project;
 import fi.eke.exercise.employeeproject.models.rest.*;
+import fi.eke.exercise.employeeproject.repository.EmployeeRepository;
 import fi.eke.exercise.employeeproject.repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +22,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static fi.eke.exercise.employeeproject.util.BussinessUtil.translateToProjectResponse;
 import static fi.eke.exercise.employeeproject.util.Constants.PROJECT_ID_NOT_FOUND;
@@ -28,6 +32,9 @@ public class ProjectService {
 
     @Autowired
     private ProjectRepository projectRepository;
+
+    @Autowired
+    private EmployeeRepository employeeRepository;
 
     public Optional<ProjectResponse> add(ProjectCreateRequest projectCreateRequest) {
         if (projectCreateRequest == null) {
@@ -54,8 +61,17 @@ public class ProjectService {
             if (e.isPresent()) {
                 Project project = e.get();
                 if (project.getStatus()!=null && project.getStatus().equals("active")) {
-                    project.setStatus("removed");
-                    projectRepository.save(e.get());
+//                    for (Employee employee: project.getEmployees()) {
+//                        employee.getProjects().remove(project);
+//                        employeeRepository.save(employee);
+//                    }
+//                    project.setStatus("removed");
+                    if (!project.hasEmployees()) {
+                        projectRepository.delete(project);
+                    }
+                    else {
+                        throw new ResourceCannotBeRemovedException("PROJECT_HAS_EMPLOYEES_ASSOCIATED", "Please remove the employee association first, The follwing employee id's are associated "+ project.getEmployees().stream().map(x -> x.getEmployeeId()).collect(Collectors.toList()));
+                    }
                     return true;
                 }
                 else if (project.getStatus().equals("removed")) {

@@ -4,7 +4,7 @@ services:
     image: postgres:alpine
     container_name: postgres-db
     ports:
-      - 5432:5432
+      - 5434:5432
     environment:
       POSTGRES_USER: eke
       POSTGRES_PASSWORD: eke

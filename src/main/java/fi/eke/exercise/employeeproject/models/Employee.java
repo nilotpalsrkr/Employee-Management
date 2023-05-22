@@ -43,7 +43,7 @@ public class Employee {
     @JoinColumn(name = "deptId", nullable = false)
     private Department department;
 
-    @ManyToMany
+    @OneToMany
     private List<Project> projects;
 
 }
